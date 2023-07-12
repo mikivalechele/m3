@@ -1,0 +1,323 @@
+
+<head>
+<style>
+
+/* Estilos para o título */
+.title-1 {
+  font-family: rm_neue, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 130%;
+  color: #1B4677;
+  word-break: break-word;
+  display: block;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Estilos para o vídeo */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-banner {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Estilos para o container de imagens triangulares */
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2vmin;
+  justify-items: center;
+  align-items: center;
+}
+
+.container img {
+  z-index: 1;
+  grid-column: span 2;
+  max-width: 100%;
+  margin-bottom: -52%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: scale(1);
+  transition: all .25s;
+  margin-top: 20px;
+}
+
+.container img:nth-child(7n + 1) {
+  grid-column: 2 / span 2;
+}
+
+.container img:hover {
+  z-index: 2;
+  transform: scale(2);
+}
+
+/* Estilos para a faixa de texto animada */
+.strip {
+  background: linear-gradient(15deg, #00a9f1, #cf00f1);
+  color: #fff;
+  position: relative;
+  margin-top: 20px;
+}
+
+.strip:before {
+  content: '';
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  z-index: 10;
+  right: 30px;
+  top: 30px;
+}
+
+/* Estilos para o título da faixa */
+h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  font-size: 100px;
+  margin: 0;
+  padding: 30px;
+  text-transform: uppercase;
+}
+
+h1 span {
+  display: inline-block;
+  transition: transform .6s cubic-bezier(.65,.02,.23,1);
+  transform: translate(20%, 100%);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.03em;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, .1);
+}
+
+h1 span:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-40%);
+  transition: transform .6s cubic-bezier(.65,.02,.23,1);
+}
+
+h1 span.row {
+  overflow: hidden;
+  line-height: 0.9;
+  display: block;
+  transform: none;
+}
+
+h1 span.row:before {
+  display: none;
+}
+
+.animate {
+  transform: translate(0, 0);
+}
+
+.animate:before {
+  transform: translateY(100%);
+}
+
+/* Estilos para o botão de assinatura */
+.subscribe-button {
+  background-color: #ffcc00;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.subscribe-button:hover {
+  background-color: #ffdf80;
+}      E ESSE É O QUE ESTÁ EM MEU BLOGGER FUNCIONANDO :  <!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Estilos para o título */
+.title-1 {
+  font-family: rm_neue, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 130%;
+  color: #1B4677;
+  word-break: break-word;
+  display: block;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Estilos para o vídeo */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-banner {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Estilos para o container de imagens triangulares */
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2vmin;
+  justify-items: center;
+  align-items: center;
+}
+
+.container img {
+  z-index: 1;
+  grid-column: span 2;
+  max-width: 100%;
+  margin-bottom: -52%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: scale(1);
+  transition: all .25s;
+  margin-top: 20px;
+}
+
+.container img:nth-child(7n + 1) {
+  grid-column: 2 / span 2;
+}
+
+.container img:hover {
+  z-index: 2;
+  transform: scale(2);
+}
+
+/* Estilos para a faixa de texto animada */
+.strip {
+  background: linear-gradient(15deg, #00a9f1, #cf00f1);
+  color: #fff;
+  position: relative;
+  margin-top: 20px;
+}
+
+.strip:before {
+  content: '';
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  z-index: 10;
+  right: 30px;
+  top: 30px;
+}
+
+/* Estilos para o título da faixa */
+h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  font-size: 100px;
+  margin: 0;
+  padding: 30px;
+  text-transform: uppercase;
+}
+
+h1 span {
+  display: inline-block;
+  transition: transform .6s cubic-bezier(.65,.02,.23,1);
+  transform: translate(20%, 100%);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.03em;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, .1);
+}
+
+h1 span:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-40%);
+  transition: transform .6s cubic-bezier(.65,.02,.23,1);
+}
+
+h1 span.row {
+  overflow: hidden;
+  line-height: 0.9;
+  display: block;
+  transform: none;
+}
+
+h1 span.row:before {
+  display: none;
+}
+
+.animate {
+  transform: translate(0, 0);
+}
+
+.animate:before {
+  transform: translateY(100%);
+}
+
+/* Estilos para o botão de assinatura */
+.subscribe-button {
+  background-color: #ffcc00;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.subscribe-button:hover {
+  background-color: #ffdf80;
+}
+</style>
+</head>
