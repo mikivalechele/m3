@@ -1,54 +1,69 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $('#widget1 .strip').each(function(){
-      var $t = $(this),
-          rows = $.trim($t.html()).split('<br>');
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="widget1">
+    <div class="strip">
+      <!-- Conteúdo do widget1 -->
+    </div>
+  </div>
 
-      $t.html('');
+  <div id="widget2">
+    <div class="strip">
+      <!-- Conteúdo do widget2 -->
+    </div>
+  </div>
 
-      $.each(rows, function(i, val){
-        $('<span class="row"></span>').appendTo($t);
+  <script>
+    $(document).ready(function() {
+      $('#widget1 .strip').each(function(){
+        var $t = $(this),
+            rows = $.trim($t.html()).split('<br>');
 
-        var letters = $.trim(val).split('');
+        $t.html('');
 
-        $.each(letters, function(j, v){
-          v = (v == ' ') ? '&nbsp;' : v;
-          $('<span>' + $.trim(v) + '</span>').appendTo($('.row:last', $t));
+        $.each(rows, function(i, val){
+          $('<span class="row"></span>').appendTo($t);
+
+          var letters = $.trim(val).split('');
+
+          $.each(letters, function(j, v){
+            v = (v == ' ') ? '&nbsp;' : v;
+            $('<span>' + $.trim(v) + '</span>').appendTo($('.row:last', $t));
+          });
         });
-
       });
-    });
 
-    $('#widget2 .strip').each(function(){
-      var $t = $(this),
-          rows = $.trim($t.html()).split('<br>');
+      $('#widget2 .strip').each(function(){
+        var $t = $(this),
+            rows = $.trim($t.html()).split('<br>');
 
-      $t.html('');
+        $t.html('');
 
-      $.each(rows, function(i, val){
-        $('<span class="row"></span>').appendTo($t);
+        $.each(rows, function(i, val){
+          $('<span class="row"></span>').appendTo($t);
 
-        var letters = $.trim(val).split('');
+          var letters = $.trim(val).split('');
 
-        $.each(letters, function(j, v){
-          v = (v == ' ') ? '&nbsp;' : v;
-          $('<span>' + $.trim(v) + '</span>').appendTo($('.row:last', $t));
+          $.each(letters, function(j, v){
+            v = (v == ' ') ? '&nbsp;' : v;
+            $('<span>' + $.trim(v) + '</span>').appendTo($('.row:last', $t));
+          });
         });
-
       });
-    });
 
-    $('body').click(function(){
-      for (i = 0; i < $('.strip span').length; i++) {
-        (function(ind) {
-          setTimeout(function(){
-              $('.strip span:not(".row")').eq(ind).toggleClass('animate');
-          }, ind * 15);
-        })(i);
-      }
-    }).click();
-  });
-</script>
+      $('body').click(function(){
+        for (i = 0; i < $('.strip span').length; i++) {
+          (function(ind) {
+            setTimeout(function(){
+                $('.strip span:not(".row")').eq(ind).toggleClass('animate');
+            }, ind * 15);
+          })(i);
+        }
+      }).click();
+    });
+  </script>
 </body>
 </html>
